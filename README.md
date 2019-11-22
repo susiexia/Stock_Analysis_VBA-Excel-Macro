@@ -5,16 +5,16 @@ Perform stock Analysis by using Excel Macro with VBA language
 
 ## Project Background
 The purpose of this stock analysis is helping client obtain and compare *Total Daily Volume* and *Yearly Return* of each target stock in particular year.
-By designing many VBA Modules for applying to different years, client can observes and concludes which stock performs better than other companies in green energy industry.
+By designing a VBA Macro for applying to different years, client can observe and make conclusion which stock performs better than others specifically in green energy industry.
 Using Macro reduce the possibility of human error for repetitive calculator tasks. In addition, client can apply Macro in multiple sheets for multiple stocks simultaneously.
 Refactor project to create one outer loop and three nested loops in order to loop through the stock original data only once and collect all information in a single pass.
 
 ## Program Design
 **There are Four Loops:**
 > * (A) is the Main Loop for going through all data and assigned tickerIndex for 12 stocks respectively.
-> * (B) is a nested loop in the main loop, go through stocks original data and retrieve ticker name, startingPrices and endingPrices, and save information to each related tickerIndex.
+> * (B) is a nested loop in the main loop (A), go through stocks original data and retrieve ticker name, startingPrices and endingPrices, and save information to each related tickerIndex.
 > * (C) a nested loop in (B) loop, in order to get volume information for each Index.
-> * (D) a new loop for put all information into analysis sheet.
+> * (D) a new loop for putting all saved output information into an analysis sheet.
 ## Logical Flow
 
 1. Request users input which year they would like to analyze stock performance.
@@ -23,7 +23,7 @@ yearValue = InputBox("What year would you like to run the analysis on?")
 ```
     
 2. Create and activate an analysis worksheet to keep all information retrieved.
-3. Declare 1 array for ticker and 3 outputs arrays for saving data, as well as array Index.
+3. Declare 1 array for ticker and 3 outputs arrays for saving data, as well as a variable named tickerIndex.
 ```
     Dim tickers(12) As String
     Dim volume(12) As String
@@ -75,7 +75,7 @@ yearValue = InputBox("What year would you like to run the analysis on?")
       Cells(4 + i, 2).Value = volume(i)
     Next i
 ```
-8. Decor Font Formatting and conditional Formatting to analysis Worksheets
+8. Decor Font Formatting and conditional color Formatting to analysis Worksheets
 
 ## Conclusion
 In 2018, only *ENPH* and *RUN* two stocks had positive yearly Return as well as large Total Daily Volume. Both of them was outperformance than others green stocks.
