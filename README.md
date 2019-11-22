@@ -9,6 +9,16 @@ By designing a VBA Macro for applying to different years, client can observe and
 Using Macro reduce the possibility of human error for repetitive calculator tasks. In addition, client can apply Macro in multiple sheets for multiple stocks simultaneously.
 Refactor project to create one outer loop and three nested loops in order to loop through the stock original data only once and collect all information in a single pass.
 
+## Conclusion
+In 2018, only *ENPH* and *RUN* two stocks had positive yearly Return as well as large Total Daily Volume. Both of them was outperformance than others green stocks.
+
+![](/2018Analysis.JPG)
+
+In 2017, all of stocks had positive Return except *TERP* (-7.2%). "DQ" made best yearly return with 199.4% but with lowest total Daily Volume (35,796,200) in 2017.
+
+![](/2017Analysis.JPG)
+
+
 ## Program Design
 **There are Four Loops:**
 > * (A) is the Main Loop for going through all data and assigned tickerIndex for 12 stocks respectively.
@@ -76,12 +86,3 @@ yearValue = InputBox("What year would you like to run the analysis on?")
     Next i
 ```
 8. Decor Font Formatting and conditional color Formatting to analysis Worksheets
-
-## Conclusion
-In 2018, only *ENPH* and *RUN* two stocks had positive yearly Return as well as large Total Daily Volume. Both of them was outperformance than others green stocks.
-
-![](/2018Analysis.JPG)
-
-In 2017, all of stocks had positive Return except *TERP* (-7.2%). "DQ" made best yearly return with 199.4% but with lowest total Daily Volume (35,796,200) in 2017.
-
-![](/2017Analysis.JPG)
