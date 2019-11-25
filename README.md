@@ -1,5 +1,5 @@
 # Stock_Analysis_VBA-Excel-Macro
-Perform stock Analysis by using Excel Macro with VBA language
+Perform stock Analysis by using Excel Macro with Visual Basic language
 
 # Challenge
 
